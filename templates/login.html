@@ -1,0 +1,185 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./log.css">
+    <!-- {% block title %}
+    <title>Document</title>
+    {% endblock %} -->
+</head>
+<body>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        
+        nav{
+            background-color: blue;
+            height: 75px;
+            width: 100%;
+        }
+        
+        
+        .logo{
+            color: wheat;
+            line-height: 75px;
+            font-size: 35px;
+            padding: 0 100px;
+            font-weight: bold;
+           
+        
+        }
+        
+        nav ul{
+            float: right;
+            
+            margin-right: 750px;
+        }
+        
+        nav ul li{
+            display: inline-block;
+            line-height: 75px;
+            margin: 0 5px;
+        }
+        
+        nav ul li a{
+            color: wheat;
+            font-size: 17px;
+            text-transform: uppercase;
+            padding: 7px 13px;
+            border-radius: 3px;
+        }
+        
+        a.active,a:hover{
+            background: blueviolet;
+            transition: .5s;
+        }
+        
+        
+        body{
+        
+            background-image: url("./bg.jpg");
+            padding: 50px 10px;
+            display: block;
+        
+            /* border: 250px auto; */
+        
+            
+        }
+        h2{
+            text-align: center;
+        }
+        
+        .log{
+        
+            background-color: rgba(0, 0, 0, .5);
+            width: 500px;
+            margin: 250px auto;
+            display: block;
+            padding: 20px 20px;
+            color: white;
+            border-radius: 10px;
+        
+        }
+        
+        
+        
+        .log label{
+        
+            display: block;
+            font-size: x-large;
+            margin: 10px;
+        }
+        input:focus{
+            background-color: aquamarine;
+        }
+        
+        .but{
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        
+        input{
+        
+            width: 100%;
+            height: 40px;
+            font-size: 20px;
+        }
+        
+        button{
+        
+            padding: 10px;
+            margin: 10px;
+            box-shadow: 10px;
+            border-radius: 7px;
+        }
+    </style>
+
+    <nav>
+        
+        <label for="logo" class="logo">Loaners</label>
+        <ul>
+            <li><a href="" class="active">home</a></li>
+            <li><a href="">get loan</a></li>
+            <li><a href="./feedback.html">feedback</a></li>
+            <li><a href="" class="logout">logout</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="log">
+    
+    <form action="">
+        
+
+            <h2>LOG IN</h2>
+
+            
+            <div class="name">
+
+
+        <label for="username">User Name</label>
+        <input type="text" name="username" id="username">
+    </div>
+
+    <div  class="pass">
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+    </div>
+
+    <div class="opt">
+
+        <label for="opt">OTP</label>
+        <input type="tel" name="opt" id="opt">
+    </div>
+    
+    
+    <div class="but">
+        <a href="{% url 'app1:welcome' %}">LOGIN</a>
+
+
+    
+    </div>
+    </form>
+    <!-- {% block content %}
+
+    <h1>Base PAge</h1>
+    {% endblock %} -->
+
+
+
+
+</body>
+</html>
